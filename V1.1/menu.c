@@ -9,19 +9,20 @@ int main()
 {
     int input_number,func_value;
 
-    while(1 == 1)
+    while(1 != 0)
     {
-        printf("Enter a number:\n 1 for exchange of two, 2 for max of three, 3 for max n and 4 for exit exit\n");
+        printf("Enter a number:\n1 - For exchange of two variables,\n2 - For max of three,\n3 - For max n\n%d - For exit exit\n", how_many_functions);
         scanf("%d",&input_number);
 
         if(input_number == how_many_functions)
-            {
-                return;
-            }
+        {
+            return 1;
+        }
 
         switch(input_number)
         {
             case 1:
+
             func_value = change_two();
 
             if(func_value == how_many_functions)
@@ -56,15 +57,23 @@ int change_two()
 {
     int first_number,second_number,temp,exit_number;
 
+    printf("Enter first number: ");
     scanf("%d",&first_number);
+
+    printf("Enter second number: ");
     scanf("%d",&second_number);
 
     temp = first_number;
     first_number = second_number;
     second_number = temp;
-    printf("%d    %d",first_number,second_number);
 
-    printf("type");
+    printf("\n");
+
+    printf("Changed variables: \n");
+    printf("First number: %d\n",first_number);
+    printf("Second number: %d\n",second_number);
+
+    printf("Type %d to exit the program or any other number to stay :",how_many_functions);
     scanf("%d",&exit_number);
 
     return exit_number;
@@ -125,3 +134,4 @@ int max_n()
 
     return exit_number;
 }
+
