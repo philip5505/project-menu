@@ -7,7 +7,7 @@ int max_n();
 
 int main()
 {
-    int input_number,func_value;
+    int input_number,func_value,test;
 
     while(1 != 0)
     {
