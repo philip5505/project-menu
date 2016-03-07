@@ -1,0 +1,23 @@
+#include <stdio.h>
+long hash(char *word)
+{
+    long h,i;
+    h=42;
+    i=0;
+    long j;
+    scanf("%s",word);
+    while(word[i]!='\0')
+    {
+    j =(word[i]*(i+1));
+      h=h+j;
+      i=i+1;
+    }
+    return h;
+}
+int main()
+{
+    char word[200];
+    printf("%ld\n",hash(word));
+    return 0;
+}
+
