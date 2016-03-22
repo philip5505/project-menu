@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main ()
+{
+
+	int const max_size = 3;
+	int arr[max_size];
+	int count;
+
+	int *ptr = &max_size;
+
+	printf("%d\n", *ptr);
+
+	printf("%d\n", *ptr);
+
+	
+	for(count = 0; count < 3; count++)
+	{
+		scanf("%d",&arr[count]);	
+	}
+
+	// ----------[------]----
+	//            ^         
+	//           arr
+
+
+
+
+	printf("%d\n", arr[1]);
+
+	printf("%d\n", *(arr+1));
+	printf("%d\n", *(1+arr));
+
+
+
+	return 0;
+}
